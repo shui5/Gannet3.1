@@ -15,11 +15,11 @@ function MRS_struct = GannetPreInitialise(MRS_struct)
     MRS_struct.p.seqorig = 'JHU'; % origin of Philips patch; options are 'JHU' or 'Philips'
     
 % Analysis parameters
-    MRS_struct.p.LB = 3; % line-broadening (in Hz)
+    MRS_struct.p.LB = 1; % line-broadening (in Hz)
     MRS_struct.p.water_phase_correction = 1; % 1 = YES; perform eddy current correction on water data
     MRS_struct.p.data_phase_correction = 0; % 1 = YES; perform eddy current correction on metabolite data
     MRS_struct.p.water_removal = 1; % 1 = YES; remove residual water signal using HSVD
-    MRS_struct.p.AlignTo = 'RobustSpecReg'; % options are 'RobustSpecReg' (recommended), 'SpecReg', 'SpecRegHERMES',
+    MRS_struct.p.AlignTo = 'none'; % options are 'RobustSpecReg' (recommended), 'SpecReg', 'SpecRegHERMES',
                                             % 'Cr', 'Cho', 'NAA', 'H2O', 'CrOFF' or 'none'
     MRS_struct.p.Vox = {'vox1','vox2'}; % for naming voxels in PRIAM data, e.g.: {'anterior','posterior'}, {'right','left'}, etc.
     MRS_struct.p.FitResidWater = 0; % 1 = YES, fit the residual water signal in the DIFF spectrum to calculate water suppression factor
